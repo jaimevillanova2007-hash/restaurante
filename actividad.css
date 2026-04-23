@@ -1,0 +1,121 @@
+.cabeza{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: black;
+    border-bottom: 5px solid lightsalmon;
+    border-radius: 7px;
+    padding-bottom: 20xp;
+    padding-top: 7px;
+    padding-left: 20px;
+    padding-right: 30px;
+
+}
+h1{
+    font-family: 'gill sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+
+}
+nav ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+
+}
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+.logo{
+    font-family: 'gill sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.5rem;
+    width: 100%;
+    background-image: url(logo.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; /* Base para el posicionamiento del texto */
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img{
+    width: 100%;
+}
+
+/* Contenedor Horizontal */
+.wrapper {
+    display: flex;
+    margin-left: 200px; /* Deja espacio al menú */
+    width: calc(400vw); /* 4 secciones de 100vw cada una */
+    height: 100vh;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.panel {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #333;
+}
+/* 6. PIE DE PÁGINA */
+.footer_abajo { 
+    background: white; 
+    padding: 30px 5%; 
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    border-top: 3px solid var(--primary); 
+}
+.seccion-multimedia-individual {
+    display: flex;
+    flex-direction: column; /* Cambia de fila a columna para que el título suba */
+    align-items: center;    /* Centra el título y las fotos */
+    gap: 20px;
+    background-color: #1a1a1a;
+    padding: 40px;
+}
+
+/* Ajustamos la cuadrícula para que sea horizontal (4 columnas x 2 filas) */
+.galeria-grid {
+    display: grid;
+    /* Ahora ponemos 4 columnas para que se vea "de frente" y ancho */
+    grid-template-columns: repeat(4, 180px); 
+    grid-template-rows: repeat(2, 150px);
+    gap: 12px;
+}
+
+.marco-foto {
+    border: 2px solid #b87333;
+    overflow: hidden;
+}
+
+.marco-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* El texto ahora es normal (horizontal) */
+.texto-horizontal {
+    writing-mode: horizontal-tb; /* Vuelve a la escritura normal */
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+}

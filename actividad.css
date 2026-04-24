@@ -1,121 +1,210 @@
-.cabeza{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    background-color: black;
-    border-bottom: 5px solid lightsalmon;
-    border-radius: 7px;
-    padding-bottom: 20xp;
-    padding-top: 7px;
-    padding-left: 20px;
-    padding-right: 30px;
-
-}
-h1{
-    font-family: 'gill sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-transform: uppercase;
-    margin: 0;
-
-}
-nav ul{
-    display: flex;
-    gap: 30px;
-    list-style: none;
-
-}
-nav a{
-    color: white;
-    text-decoration: none;
+/* 1. CONTENEDOR PRINCIPAL DEL ENCABEZADO (HEADER) */
+.cabeza {
+    display: flex;             /* Activa el modo flexible para alinear elementos hijos */
+    justify-content: space-between; /* Separa el logo del menú (uno a cada extremo) */
+    align-items: center;       /* Centra verticalmente el contenido */
+    color: white;              /* Color de texto blanco */
+    background-color: black;   /* Fondo negro */
+    border-bottom: 5px solid lightsalmon; /* Línea decorativa inferior de color salmón */
+    border-radius: 7px;        /* Bordes ligeramente redondeados */
+    padding-bottom: 20px;      /* Espacio interno inferior */
+    padding-top: 7px;          /* Espacio interno superior */
+    padding-left: 20px;        /* Espacio interno izquierdo */
+    padding-right: 30px;       /* Espacio interno derecho */
+   
 }
 
-.logo{
+/* 2. TÍTULOS PRINCIPALES */
+h1 {
+    font-family: 'gill sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Tipografía principal */
+    text-transform: uppercase; /* Convierte todo el texto a mayúsculas */
+    margin: 0;                 /* Elimina márgenes por defecto para evitar espacios extra */
+}
+
+/* 3. NAVEGACIÓN Y LISTAS */
+nav ul {
+    display: flex;             /* Pone los elementos de la lista en fila */
+    gap: 30px;                 /* Espacio de 30px entre cada link del menú */
+    list-style: none;          /* Quita los puntos/viñetas de la lista */
+    margin: 0;                 /* Limpia márgenes externos */
+    padding: 0;                /* Limpia espacios internos */
+    
+}
+
+nav a {
+    color: white;              /* Enlaces de color blanco */
+    text-decoration: none;     /* Quita el subrayado azul por defecto de los links */
+    
+
+}
+
+
+
+/* 4. SECCIÓN DEL LOGO / HÉROE (BANNER PRINCIPAL) */
+.logo {
     font-family: 'gill sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-transform: uppercase;
     color: white;
     font-size: 1.5rem;
-    width: 100%;
-    background-image: url(logo.jpg);
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative; /* Base para el posicionamiento del texto */
-    display:flex;
+    width: 100%;               /* Ocupa todo el ancho de la pantalla */
+    background-image: url(logo.jpg); /* Imagen de fondo */
+    height: 100vh;             /* Ocupa el 100% de la altura de la pantalla (Viewport Height) */
+    background-repeat: no-repeat; /* No repite la imagen si es pequeña */
+    background-size: cover;    /* Ajusta la imagen para que cubra todo el contenedor */
+    position: relative;        /* Permite posicionar elementos internos respecto a este contenedor */
+    display: flex;             /* Flexbox para centrar el texto sobre la imagen */
     text-align: center;
-    justify-content: center;
-    align-items: center;
-
+    justify-content: center;   /* Centrado horizontal del texto */
+    align-items: center;       /* Centrado vertical del texto */
 }
 
-.img{
-    width: 100%;
+/* 5. IMÁGENES GENÉRICAS */
+.img {
+    width: 100%;               /* Hace que la imagen se adapte al ancho de su contenedor */
 }
 
-/* Contenedor Horizontal */
-.wrapper {
-    display: flex;
-    margin-left: 200px; /* Deja espacio al menú */
-    width: calc(400vw); /* 4 secciones de 100vw cada una */
-    height: 100vh;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+/* 6. SECCIÓN "SOBRE NOSOTROS" */
+#sobre {
+    width: 100vw;              /* Ocupa el ancho total de la ventana visual */
 }
 
+.content-flex-row {
+    flex-grow: 1;              /* Permite que el elemento crezca para ocupar espacio disponible */
+}
+
+/* 7. PANELES DE INFORMACIÓN */
 .panel {
-    width: 100vw;
-    height: 100vh;
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    padding: 60px;
+    background-color: black; 
+    color: white;
+    text-align: center;
     display: flex;
-    align-items: center;
-    border-right: 1px solid #333;
+    justify-content: center;
 }
-/* 6. PIE DE PÁGINA */
+
+.chef-img {
+    align-self: flex-start;    /* Alinea la imagen del chef al inicio del contenedor flex */
+}
+
+.img-container {
+    width: 100%;
+    display: flex;
+}
+
+.info {
+    flex-grow: 1;              /* La caja de información toma el espacio sobrante */
+}
+
+/* 8. PIE DE PÁGINA (FOOTER) */
 .footer_abajo { 
     background: white; 
     padding: 30px 5%; 
     display: flex; 
     justify-content: space-between; 
-    flex-wrap: wrap; 
+    flex-wrap: wrap;           /* Si no cabe el contenido, salta a la siguiente línea */
     gap: 20px; 
-    border-top: 3px solid var(--primary); 
+    border-top: 3px solid #ff7f50; /* Borde superior sólido */
 }
+
+/* 9. SECCIÓN MULTIMEDIA Y GALERÍA */
 .seccion-multimedia-individual {
     display: flex;
-    flex-direction: column; /* Cambia de fila a columna para que el título suba */
-    align-items: center;    /* Centra el título y las fotos */
-    gap: 20px;
-    background-color: #1a1a1a;
-    padding: 40px;
+    flex-direction: column;    /* Elementos uno debajo del otro (Título arriba, Galería abajo) */
+    align-items: center;       /* Centra todo horizontalmente */
+    gap: 20px; 
+    background-color: black; 
+    padding: 70px; 
 }
 
-/* Ajustamos la cuadrícula para que sea horizontal (4 columnas x 2 filas) */
+/* Cuadrícula de la galería (Grid) */
 .galeria-grid {
-    display: grid;
-    /* Ahora ponemos 4 columnas para que se vea "de frente" y ancho */
-    grid-template-columns: repeat(4, 180px); 
+    display: grid;             /* Activa el modo rejilla */
+    /* Crea 5 columnas de 180px cada una */
+    grid-template-columns: repeat(5, 180px); 
+    /* Crea 2 filas de 150px cada una */
     grid-template-rows: repeat(2, 150px);
-    gap: 12px;
+    gap: 12px;                 /* Espacio entre las fotos */
 }
 
+/* Contenedor de cada foto (Marco) */
 .marco-foto {
-    border: 2px solid #b87333;
-    overflow: hidden;
+    border: 2px solid #b87333; /* Borde color bronce/cobre */
+    overflow: hidden;          /* Corta cualquier parte de la imagen que salga del borde */
 }
 
 .marco-foto img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%;               /* La imagen llena el ancho del marco */
+    height: 100%;              /* La imagen llena el alto del marco */
+    object-fit: cover;         /* Recorta la imagen para que llene el espacio sin deformarse */
 }
 
-/* El texto ahora es normal (horizontal) */
+/* Estilo del título horizontal en la sección multimedia */
 .texto-horizontal {
-    writing-mode: horizontal-tb; /* Vuelve a la escritura normal */
+    writing-mode: horizontal-tb; /* Asegura que el texto se lea de izquierda a derecha */
     color: #ffffff;
     font-size: 2.5rem;
     text-transform: uppercase;
     margin-bottom: 10px;
-    letter-spacing: 5px;
+    letter-spacing: 5px;       /* Espaciado entre letras para un estilo más moderno */
 }
+
+/* TABLA DE HORARIOS OPTIMIZADA */
+.content {
+    background: #000;
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+    font-family: 'gill sans', sans-serif;
+}
+
+.content h3 {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    border-bottom: 2px solid lightsalmon;
+    display: inline-block;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 10px 20px 30px 40px;
+    border-collapse: collapse; /*para que los bordes de las celdes se peguen*/
+    background: rgba(255,255,255,.05);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Agrupamos th y td para ahorrar líneas */
+th, td {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+th {
+    background: lightsalmon;
+    color: #000;
+    text-transform: uppercase;
+}
+
+tbody tr:hover {
+    background: rgba(255,255,255,.1);
+
+}
+
+.gold {
+    color: #b87333 ;
+    font-weight: bold; /*le estás pidiendo al navegador que use la versión "negrita" de la fuente*/
+    
+
+}
+
+.gold:hover {
+    color: lightsalmon;
+    transform: scale(1.1);
+    display: inline-block; /* Necesario para que el scale funcione bien */
+}
+
+/* Responsive en una sola línea */
+@media (max-width: 600px) { th, td { padding: 10px 5px; font-size: .8rem; } }

@@ -1,0 +1,41 @@
+/* Footer en columnas */
+.footer_abajo {
+    display: flex;                 /* activa columnas */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    flex-wrap: wrap;              /* para que se acomode en pantallas pequeñas */
+}
+
+/* Cada bloque dentro del footer */
+.footer_abajo div {
+    flex: 1;                      /* todas las columnas ocupan el mismo espacio */
+    min-width: 150px;
+}
+
+/* Logo */
+.footer-logo {
+    flex: 1;
+}
+
+/* Imagen más pequeña */
+.footer-logo img {
+    width: 100%;
+    max-width: 120px;             /* ajusta el tamaño aquí */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Títulos */
+.footer_abajo h4 {
+    margin-bottom: 10px;
+}
+
+/* Texto */
+.footer_abajo p {
+    margin: 5px 0;
+    font-size: 14px;
+}

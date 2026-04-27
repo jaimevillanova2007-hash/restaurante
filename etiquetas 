@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!-- Define el tipo de documento HTML5 -->
+<html lang="es"> <!-- Idioma de la página -->
+<head>
+    <meta charset="UTF-8"> <!-- Permite caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+    <title>Mi página</title> <!-- Título de la pestaña -->
+</head>
+
+<body>
+
+    <!-- ENCABEZADOS -->
+    <h1>Título principal</h1>
+    <h2>Subtítulo</h2>
+    <h3>Sección</h3>
+
+    <!-- PÁRRAFOS -->
+    <p>Esto es un párrafo</p>
+
+    <!-- ENLACES -->
+    <a href="https://google.com">Ir a Google</a>
+
+    <!-- IMÁGENES -->
+    <img src="imagen.jpg" alt="Descripción de la imagen">
+
+    <!-- LISTAS -->
+    <ul> <!-- Lista desordenada -->
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+    </ul>
+
+    <ol> <!-- Lista ordenada -->
+        <li>Primero</li>
+        <li>Segundo</li>
+    </ol>
+
+    <!-- DIV Y SPAN -->
+    <div>Contenedor en bloque</div>
+    <span>Contenedor en línea</span>
+
+    <!-- FORMULARIOS -->
+    <form>
+        <input type="text" placeholder="Escribe tu nombre">
+        <input type="password" placeholder="Contraseña">
+        <button>Enviar</button>
+    </form>
+
+    <!-- ETIQUETAS SEMÁNTICAS (más avanzadas) -->
+    <header>Encabezado de la página</header>
+    <nav>Menú de navegación</nav>
+    <section>Sección de contenido</section>
+    <article>Artículo independiente</article>
+    <aside>Contenido lateral</aside>
+    <footer>Pie de página</footer>
+
+    <!-- MULTIMEDIA -->
+    <video controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+/* Selector básico */
+body {
+    background-color: lightblue; /* Color de fondo */
+    font-family: Arial, sans-serif; /* Fuente */
+}
+
+/* Clases */
+.caja {
+    width: 200px; /* Ancho */
+    height: 100px; /* Alto */
+    background-color: red;
+    margin: 10px; /* Espacio exterior */
+    padding: 10px; /* Espacio interior */
+    border: 2px solid black; /* Borde */
+}
+
+/* ID (solo uno por página) */
+#titulo {
+    color: blue;
+}
+
+/* Hover (cuando pasas el mouse) */
+button:hover {
+    background-color: green;
+    color: white;
+}
+
+/* FLEXBOX (muy importante - intermedio) */
+.contenedor {
+    display: flex; /* Activa flexbox */
+    justify-content: space-between; /* Espacio horizontal */
+    align-items: center; /* Alineación vertical */
+}
+
+/* GRID (más avanzado) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 10px; /* Espacio entre elementos */
+}
+
+/* MEDIA QUERY (responsive - avanzado) */
+@media (max-width: 600px) {
+    body {
+        background-color: pink; /* Cambia en pantallas pequeñas */
+    }
+}
+
+/* ANIMACIONES (básico) */
+@keyframes mover {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(100px);
+    }
+}
+
+.animado {
+    animation: mover 2s infinite; /* Aplica animación */
+}
